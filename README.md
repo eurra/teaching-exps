@@ -3,8 +3,8 @@
 
 ## Table of Contents  
 * [Content](#content)
-    * [Case 1: A day of an object in the memory](#case-1-a-day-of-an-object-in-the-memory)
-    * [Case 2: Getting a *closure* with Javascript (not *that* closure)](#case-2-getting-a-closure-with-javascript-not-that-closure)
+    * [A day of an object in the memory](#a-day-of-an-object-in-the-memory)
+    * [Getting a *closure* with Javascript (not *that* closure)](#getting-a-closure-with-javascript)
 * [Methodology](#methodology)
 
 
@@ -21,7 +21,7 @@ At the start of each example, a brief bottom line is presented. Also, consider t
 
 ## Content
 
-### Case 1: A day of an object in the memory
+### A day of an object in the memory
 
 >* Learning object-oriented programming is hard.
 >* A key is to understand how objects are running and interacting in the memory of the computer.
@@ -50,7 +50,7 @@ This gets more interesting when you include arrays in the memory:
 
 In this way, you can effectively explain what is really happening with the code at rightmost part of the diagram, step-by-step, and visualize how memory changes with each line of code at the leftmost part, which allows to transform pretty abstract concepts and behavior into very concrete examples. [You can see the complete material here](docs/OO-material-example.pdf), in which these (slides 25-41) and other visual explanations (and code repositories) regarding OO-concepts are provided.
 
-### Case 2: Getting a *closure* with Javascript (not *that* closure)
+### Getting a *closure* with Javascript
 
 >* A *closure* is a pivotal Javascript language feature, widely used for implementing frameworks and tools. When you understand how it operate, you learn that it is present in all places.
 >* To teach how a closure work is hard, because you need to understand several rules of the language regarding *data* (variables) and *scopes* in where such data is defined.
@@ -58,7 +58,7 @@ In this way, you can effectively explain what is really happening with the code 
 
 *Javascript* is a extremely flexible language. In contrast to other languages like Java (students always confuse both), whose implementation started with specific programming paradigms and gradually incorporated new ones (e.g. functional), Javascript from the beginning started as a mix of multiple paradigms, focused particularly on *prototypes*. Higher levels of flexibility on a programming language are not free, and they become with the need of discipline standards when creating and organizing code.
 
-Because of that, Javascript comes in a number of flavors and styles, guided through the adoption of well-know frameworks and systems such as *Node.js*, *React*, *Vue*, *Angular*, *JQuery*, *Typescript*, etc. All these provide us those standards and code structure needed to deal with higher levels of flexibility. And so, it has become one of the most widely used programming languages for web application development.
+Because of that, Javascript comes in a number of flavors and styles, guided through the adoption of well-know frameworks and systems such as *Node.js*, *React*, *Vue*, *Angular*, *JQuery*, *Typescript*, etc. All these provide us those standards and code structure needed to deal with higher levels of flexibility. And so, it has become one of the most widely programming languages used for web application development.
 
 I started to learn and understand specific Javascript features when I had to teach web app development. Even before, as developer, I didn't have the need to understand too specific features, precisely because high-level features provided by frameworks. But there is a point where you need to deepen on how these features work, specially when you need to teach them.
 
@@ -106,5 +106,43 @@ Even so, it is not trivial to understand that. In the past I worked on some mate
 ![Closure step 3](figs/closure-3.jpg "Closure step 3")
 
 With this visual aid, it was pretty straightforward to explain closures to students, and to better understand the behavior of the code presented before. [You can see the complete material here](docs/JS-material.pdf), in which these (slides 7-10) and other visual explanations (and code repositories) regarding Javascript mechanisms are presented.
+
+### When the problem is the problem
+
+Sometimes, The coding part of solving a specific problem is not the main struggle when learning programming, but to clearly understand the problem itself that is being solved. The more beginner the learner, more time is spent on learning the language concepts and mechanics, commonly over basic problems. The more advanced is the learner, more time is spent on problems rather than languages, so the addressed problems can become more hard. I commonly illustrate this situation to early-years students with this graph:
+
+<img src="figs/learning-graph.jpg" width="700"/>
+
+The green curve means the struggle of the learner when using programming languages, while the blue one means his capabilities for solving problems through programming. This graph represents the *successful* learning process: at some point in time, the blue curve should surpass the green one, i.e., the *language domination point*. At this point, the learner can further concentrate more on the problems than the tool (the programming language), thus his problem solving skills can develop faster.
+
+On the other side, learners may get in the following situation:
+
+<img src="figs/learning-graph-2.jpg" width="700"/>
+
+which is the inverse one. The learner stagnate on understanding the language, and the problem solving skills never develop. These are commonly the situation of student dropouts. The ideal process should motivate the green curve to descend as quickly as possible.
+
+For advanced students, I commonly spend more time addressing problems on more advanced subjects. In the past I had the opportunity of teaching optimization topics related to my past research, particularly *heuristic algorithms*. These tools are suited for finding good solutions (non necessarily optimal) of very complex combinatorial problems, i.e. the ones in which you need to set values to a very large number of variables, and from that, calculate some kind of quality metric that tells you the solution fitness. In formal terms, these problems are commonly represented and know as *Constraint Satisfaction Problems (CSP's)*. So, to understand heuristic algorithms, previously one must understand CSPs.
+
+And guess that, to teach and to understand CSPs is hard! That is because, formally speaking, a CSP is expressed through a mathematical model that abstract all the components of the domain. For example, consider the *Multidimensional 0-1 Knapsack Problem (MKP)*, a CSP whose explanation can be summarized as follows:
+
+- There is a set of *knapsacks*, each one with a specific *resource capacity*.
+- There is a set of *items* that can be selected in a specific solution.
+- When a item is selected, it consumes a specific amount of resources *for each knapsack*, and this quantity can be different for each knapsack.
+- Each item yields a specific *profit* when selected.
+- The goal of the problem is to find a subset of items that yields maximum profit without exceeding the resource capacities for all the knapsacks.
+
+The formal mathematical model for the above description is the following:
+
+Maximize $z = \sum_{j=1}^{n}{c_j x_j}$, subject to:
+
+$\sum_{j=1}^{n}{a_{ij} x_{ij}} \le b_i, \qquad i \in M = \{1,2,...,m\}$
+
+$x_j \in \{0,1\}, \qquad j \in N = \{1,2,...,m\}$
+
+with $M$ the set of knapsacks, $N$ the set of items, $c_j$ is the profit that yields the $j$ item, $a_{ij}$ is the amount of resources that the item $j$ consume from knapsack $i$ when selected and $b_i$ is the resource capacity of the knapsack $j$.
+
+
+
+[MKP Viewer](https://html-preview.github.io/?url=https://github.com/eurra/teaching-exps/blob/main/mkp-viewer/index.html)
 
 ## Methodology
