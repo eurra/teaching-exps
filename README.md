@@ -9,6 +9,9 @@ The examples that I share address both perspectives of **content** and **methodo
 
 At the start of each example, a brief bottom line is presented. Also, consider that most teaching artifacts and examples are provided in spanish, because I taught programming in such language in the past. Don't worry, they are explained in a way that the visuals are more important than text.
 
-- [A day of an object in the memory](oo/)
-- [Getting a *closure* with Javascript](js/)
-- [When the problem is the problem](csp/)
+- [A day of an object in the memory](oo/).
+- [Getting a *closure* with Javascript](js/).
+- [When the problem is the problem](csp/).
+- [The tree of challenges - and how to adapt to a pandemic and to AI](challenges-tree/).
+
+Additionally, you can check [Mindwalls prototype](https://github.com/eurra/mindwalls), an early development of a visual programming system that I worked in free times. Even if it not directly related to teaching, their principles and goals are closely related on how we understand and address the programming mental process, whose maturity and development is critical when learning. For me, one clear use case for these kind of systems is programming learning, like other visual environments such as [Scratch](https://scratch.mit.edu/) or [Blockly](https://blockly.games/).
