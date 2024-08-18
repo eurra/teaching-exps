@@ -1,4 +1,5 @@
 # A day of an object in the memory
+> *Author*: Enrique Urra - enrique.urra@gmail.com
 
 >* Learning object-oriented programming is hard.
 >* A key is to understand how objects are running and interacting in the memory of the computer.

@@ -1,6 +1,7 @@
 # When the problem is the problem
+> *Author*: Enrique Urra - enrique.urra@gmail.com
 
-Sometimes, The coding part of solving a specific problem is not the main struggle when learning programming, but to clearly understand the problem itself that is being solved. The more beginner the learner, more time is spent on learning the language concepts and mechanics, commonly over basic problems. The more advanced is the learner, more time is spent on problems rather than languages, so the addressed problems can become more hard. I commonly illustrate this situation to early-years students with this graph:
+Sometimes, The coding part of solving a specific problem is not the main struggle when learning programming, but to clearly understand the problem itself that is being solved. The more beginner the learner, more time is spent on learning language concepts and mechanics, commonly over basic problems. The more advanced is the learner, more time is spent on problems rather than languages, so the addressed problems can become more hard. I commonly illustrate this situation to early-years students with this graph:
 
 <img src="learning-graph.jpg" width="700"/>
 
@@ -32,6 +33,28 @@ $x_j \in \{0,1\}, \qquad j \in N = \{1,2,...,m\}$
 
 with $M$ the set of knapsacks, $N$ the set of items, $c_j$ is the profit that yields the $j$ item, $a_{ij}$ is the amount of resources that the item $j$ consume from knapsack $i$ when selected and $b_i$ is the resource capacity of the knapsack $j$.
 
+Rather than explaining the structure of this problem from the mathematical definitions, I wanted to visualize and interact with its components, in a way such that learners can understand the meaning of each variable beyond formalities. For that, [I developed a simple interactive user interface](https://html-preview.github.io/?url=https://github.com/eurra/teaching-exps/blob/main/csp/mkp-viewer/index.html) in which a MKP instance can be loaded and a solution can be constructed through selecting items:
 
+![MKP UI](mkp-ui.jpg "MKP UI")
 
-[MKP Viewer](https://html-preview.github.io/?url=https://github.com/eurra/teaching-exps/blob/main/csp/mkp-viewer/index.html)
+In there you can visualize the main variables (knapsacks, items, profits and capacity/consumption restraints) in a matrix format, and select items step-by-step, visualizing how capacity constraints of knapsack are addressed. When constraints are violated, the UI highlights that:
+
+![MKP UI 2](mkp-ui-2.jpg "MKP UI 2")
+
+This tool was extremely useful for students, allowing them to understand in a more straightforward manner the formalities of the math model.
+
+Another case in where the challenge is to learn the problem is the well known *Travelling Salesman Problem (TSP)*, a CSP which can be summarized as follows:
+
+- There is a network of cities with a specific distance (cost) between each pair of them.
+- Distance is the same in *both ways*: distance from A to B is the same from B to A.
+- The goal of the problem is to visit *each city once*, starting from an origin city and returning to it at the end of the schedule.
+
+In this way, besides the mathematical model itself, it is pretty useful to visualize the cities network and each travelling distance in a matrix format:
+
+<img src="tsp.jpg" width="700"/>
+
+Moreover, in this format one can exemplify how a schedule is constructed step-by-step and how constraint of the mathematical model are satisfied or violated, allowing the learners to bridge the understanding between the model itself and the domain concepts:
+
+<img src="tsp-2.jpg" width="700"/>
+
+These artifacts were useful for translating the problem analysis into a data structure design. For example, the matrix showed in the example was further modelled in the code implementation that students developed for solving TSP instances. [You can see the complete material here](CSPs-material.pdf), in which these (slides 5-13) and other visual explanations regarding CSPs are presented.

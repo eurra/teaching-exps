@@ -1,8 +1,9 @@
 # Getting a *closure* with Javascript
+> *Author*: Enrique Urra - enrique.urra@gmail.com
 
 >* A *closure* is a pivotal Javascript language feature, widely used for implementing frameworks and tools. When you understand how it operate, you learn that it is present in all places.
 >* To teach how a closure work is hard, because you need to understand several rules of the language regarding *data* (variables) and *scopes* in where such data is defined.
->* I developed some useful visual examples [here](JS-material.pdf) (check slides 7-10) that allows to explain how closures work, step-by-step, and to understand the results of related code examples.
+>* I developed some useful visual examples [here](JS-material.pdf) (check pages 7-10) that allows to explain how closures work, step-by-step, and to understand the results of related code examples.
 
 *Javascript* is a extremely flexible language. In contrast to other languages like Java (students always confuse both), whose implementation started with specific programming paradigms and gradually incorporated new ones (e.g. functional), Javascript from the beginning started as a mix of multiple paradigms, focused particularly on *prototypes*. Higher levels of flexibility on a programming language are not free, and they become with the need of discipline standards when creating and organizing code.
 
@@ -53,4 +54,4 @@ Even so, it is not trivial to understand that. In the past I worked on some mate
 
 ![Closure step 3](closure-3.jpg "Closure step 3")
 
-With this visual aid, it was pretty straightforward to explain closures to students, and to better understand the behavior of the code presented before. [You can see the complete material here](JS-material.pdf), in which these (slides 7-10) and other visual explanations (and code repositories) regarding Javascript mechanisms are presented.
+With this visual aid, it was pretty straightforward to explain closures to students, and to better understand the behavior of the code presented before. [You can see the complete material here](JS-material.pdf), in which these (pages 7-10) and other visual explanations (and code repositories) regarding Javascript mechanisms are presented.

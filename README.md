@@ -11,3 +11,4 @@ At the start of each example, a brief bottom line is presented. Also, consider t
 
 - [A day of an object in the memory](oo/)
 - [Getting a *closure* with Javascript](js/)
+- [When the problem is the problem](csp/)
