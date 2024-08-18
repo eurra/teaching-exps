@@ -1,7 +1,12 @@
 # When the problem is the problem
 > *Author*: Enrique Urra - enrique.urra@gmail.com
 
-Sometimes, The coding part of solving a specific problem is not the main struggle when learning programming, but to clearly understand the problem itself that is being solved. The more beginner the learner, more time is spent on learning language concepts and mechanics, commonly over basic problems. The more advanced is the learner, more time is spent on problems rather than languages, so the addressed problems can become more hard. I commonly illustrate this situation to early-years students with this graph:
+>* More advanced learners who are used to programming languages concepts and mechanics can focus on *harder problems*. At these stages, to teach such problems is a challenge.
+>* *Constraint Satisfaction Problems (CSPs)* are an example of optimization-related problems that are hard to teach because of their mathematical formalities and definitions.
+>* In the past I had to explain the *Multidimensional 0-1 Knapsack Problem (MKP)*, a basic but challenging CSP to learn. It was useful to develop [a simple interactive user interface](https://html-preview.github.io/?url=https://github.com/eurra/teaching-exps/blob/main/csp/mkp-viewer/index.html) in which a MKP instance can be loaded and a solution can be constructed step-by-step, allowing students to understand variables, constraints and domain particularities.
+>* I also developed some material [here](CSPs-material.pdf) (check slides 5-13) for the *Travelling Salesman Problem (TSP)*, another  classic CSP. With this, a visual presentation of the domain and its variables allowed students to better understand data structures required to programming solvers for the problem, and how constraints work on them.
+
+Sometimes, The coding part of solving a specific problem is not the main struggle when learning programming, but to clearly understand the problem itself that is being solved. The more beginner the learner, more time is spent on learning language concepts and mechanics, commonly over basic problems. The more advanced is the learner, more time is spent on problems rather than languages, so the addressed problems can become more harder. I commonly illustrate this situation to early-years students with this graph:
 
 <img src="learning-graph.jpg" width="700"/>
 
